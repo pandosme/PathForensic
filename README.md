@@ -1,0 +1,2 @@
+# PathForensic
+A Node-RED Dashboard client to analyze paths ingested by "Path Ingestion"
