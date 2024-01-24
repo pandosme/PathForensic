@@ -5,7 +5,6 @@
 .flows.json.backup
 .flows_cred.json.backup
 .npm/
-flows.json
 mongodb/
 node_modules/
 package-lock.json
