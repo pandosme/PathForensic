@@ -15,18 +15,20 @@ services:
       - MONGGODN_PORT=27017
     ports:
       - '1888:1880'
-    links:
-      - mongodb
+#    links:
+#      - mongodb
     volumes:
       - ./:/data
-  mongodb:
-    image: mongo:6.0.13
-    container_name: PathForensic-mongodb
-    restart: always
-    environment:
-      - MONGODB_AUTH=false
-    ports:
-      - 27017:27017
-    volumes:
-      - ./mongodb:/data/db
+## Remove comments if you need a MongoDB
+## Also Remove the comment for links above
+#  mongodb:
+#    image: mongo:6.0.13
+#    container_name: PathForensic-mongodb
+#    restart: always
+#    environment:
+#      - MONGODB_AUTH=false
+#    ports:
+#      - 27017:27017
+#    volumes:
+#      - ./mongodb:/data/db
  
