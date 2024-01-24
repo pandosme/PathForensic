@@ -1,9 +1,8 @@
 {
     "name": "PathFOrensic",
     "description": "Visualize Axis Camera Path analytics based on Path Ingestion",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "dependencies": {
-        "node-red-contrib-axis-acs": "2.1.1",
         "node-red-dashboard": "~3.6.2",
         "node-red-node-mongodb": "0.2.5",
         "node-red-node-ui-table": "0.4.3"
