@@ -27,8 +27,6 @@ services:
 #    restart: always
 #    environment:
 #      - MONGODB_AUTH=false
-#    ports:
-#      - 27017:27017
 #    volumes:
 #      - ./mongodb:/data/db
  
