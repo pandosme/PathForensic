@@ -21,7 +21,7 @@ services:
     volumes:
       - ./:/data
 ## Remove comments if you need a MongoDB
-## Also Remove the comment for links above
+## Also Remove the comment for links in the nodered section above
 #  mongodb:
 #    image: mongo:6.0.13
 #    container_name: PathForensic-mongodb
@@ -31,6 +31,7 @@ services:
 #    volumes:
 #      - ./mongodb:/data/db
 ## Remove comments if you need an MQTT Broker
+## Also Remove the comment for links in the nodered sections above
 #  mqtt:
 #    container_name: PathForensic-MQTT
 #    restart: always
