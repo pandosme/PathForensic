@@ -4,6 +4,7 @@
 .config.users.json.backup
 .flows.json.backup
 .flows_cred.json.backup
+docker-compose.yaml.local
 .npm/
 mongodb/
 node_modules/

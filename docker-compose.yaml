@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       - TZ=Europe/Stockholm
-      - MQTT_BROKER_ADDRESS=
+      - MQTT_BROKER_ADDRESS=mqtt
       - MQTT_BROKER_PORT=1883
       - MQTT_BROKER_USERNAME=
       - MQTT_BROKER_PASSWORD=
@@ -17,18 +17,25 @@ services:
       - '1888:1880'
 #    links:
 #      - mongodb
+#      - mqtt
     volumes:
       - ./:/data
 ## Remove comments if you need a MongoDB
-## Also Remove the comment for links above
+## Also Remove the comment for links in the nodered section above
 #  mongodb:
 #    image: mongo:6.0.13
 #    container_name: PathForensic-mongodb
 #    restart: always
 #    environment:
 #      - MONGODB_AUTH=false
-#    ports:
-#      - 27017:27017
 #    volumes:
 #      - ./mongodb:/data/db
- 
+## Remove comments if you need an MQTT Broker
+## Also Remove the comment for links in the nodered sections above
+#  mqtt:
+#    container_name: PathForensic-MQTT
+#    restart: always
+#    image: eclipse-mosquitto
+#    user: '0'
+#    ports:
+#      - '1883:1883'
