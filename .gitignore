@@ -1,3 +1,4 @@
+docker-compose.yaml
 .npm/
 mongodb/
 node_modules/
