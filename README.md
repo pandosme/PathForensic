@@ -2,11 +2,11 @@
 A Node-RED Application that collects data from Axis Cameras or Radars, stores them in a MongoDB and visaulize the results in a web dashboard (Node-RED).
 
 ## System Components
+* PathForesnic repo hosts Node-RED/flows and a MongoDB in a Docker container
 * Axis Cameras or Radars setup with Node-RED and flows that sends Path data to MQTT
   - [Custom Object Analytics](https://pandosme.github.io/node-red/2024/04/13/Customized-Object-Analytics.html)
-  - [Custom Radar Data Analytics](Custom Radar Data Analytics)
+  - [Custom Radar Data Analytics](https://pandosme.github.io/node-red/2024/05/05/Custom-Radar-Data-Analytics.html)
   You can filter unwanted detections/paths in the device (e.g. Area-Of-Intrest, minimum ditance, minimum age)
-* PathForesnic that runs Node-RED and a MongoDB in a container
 * MQTT Broker (this can easily be setup with a docker-compose)
 
 ## Installation
