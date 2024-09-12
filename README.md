@@ -44,6 +44,7 @@ Follow these guides.
   - [Custom Radar Data Analytics](Custom Radar Data Analytics)
 
 The Simplest flow without any filtering looks like this
+![Flow](simple-flow.png)
 
 Flow (Copy/Paste to Device Node-RED):
 ```
