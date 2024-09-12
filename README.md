@@ -20,7 +20,7 @@ npm install
 ```
 
 ## Configuration
-Before starting the application you need to have and edit a ```docker-compose.yaml```
+Before starting the application you havt to create and edit a ```docker-compose.yaml```
 ```
 cp template/docker-compse.yaml .
 nano docker-compose-yaml
