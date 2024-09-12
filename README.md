@@ -6,7 +6,7 @@ A Node-RED Application that collects data from Axis Cameras or Radars, stores th
 * Axis Cameras or Radars setup with Node-RED and flows that sends Path data to MQTT
   - [Custom Object Analytics](https://pandosme.github.io/node-red/2024/04/13/Customized-Object-Analytics.html)
   - [Custom Radar Data Analytics](https://pandosme.github.io/node-red/2024/05/05/Custom-Radar-Data-Analytics.html)
-  You can filter unwanted detections/paths in the device (e.g. Area-Of-Intrest, minimum ditance, minimum age)
+  <br>You can filter unwanted detections/paths in the device (e.g. Area-Of-Intrest, minimum ditance, minimum age)
 * MQTT Broker (this can easily be setup with a docker-compose)
 
 ## Installation
