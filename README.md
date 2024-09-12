@@ -4,9 +4,7 @@ A Node-RED Application that collects data from Axis Cameras or Radars, stores th
 ## System Components
 * PathForesnic repo hosts Node-RED/flows and a MongoDB in a Docker container
 * Axis Cameras or Radars setup with Node-RED and flows that sends Path data to MQTT
-  - [Custom Object Analytics](https://pandosme.github.io/node-red/2024/04/13/Customized-Object-Analytics.html)
-  - [Custom Radar Data Analytics](https://pandosme.github.io/node-red/2024/05/05/Custom-Radar-Data-Analytics.html)
-  <br>You can filter unwanted detections/paths in the device (e.g. Area-Of-Intrest, minimum ditance, minimum age)
+  <br>You can filter unwanted detections/paths in the device (e.g. Area-Of-Intrest, minimum ditance, minimum age) to optimize the system
 * MQTT Broker (this can easily be setup with a docker-compose)
 
 ## Installation
@@ -41,7 +39,7 @@ When done press Ctrl-s and Ctrl-x
 ## Setup Cameras & Radars
 Follow these guides.
   - [Custom Object Analytics](https://pandosme.github.io/node-red/2024/04/13/Customized-Object-Analytics.html)
-  - [Custom Radar Data Analytics](Custom Radar Data Analytics)
+  - [Custom Radar Data Analytics](https://pandosme.github.io/node-red/2024/05/05/Custom-Radar-Data-Analytics.html)
 
 The Simplest flow without any filtering looks like this
 ![Flow](simple-flow.png)
