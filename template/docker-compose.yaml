@@ -1,4 +1,3 @@
-version: '3'
 services:
   nodered:
     container_name: PathForensic-nodered
@@ -12,30 +11,37 @@ services:
       - MQTT_BROKER_PASSWORD=
       - RECORDER_ADDRESS=IP or FQDN.  Leave blank if no recorder used.
       - MONGODB_ADDRESS=mongodb
-      - MONGGODN_PORT=27017
+      - MONGODB_PORT=27017
     ports:
       - '1888:1880'
-#    links:
-#      - mongodb
-#      - mqtt
+    networks:
+      - app_network
     volumes:
       - ./:/data
-## Remove comments if you need a MongoDB
-## Also Remove the comment for links in the nodered section above
-#  mongodb:
-#    image: mongo:6.0.13
-#    container_name: PathForensic-mongodb
-#    restart: always
-#    environment:
-#      - MONGODB_AUTH=false
-#    volumes:
-#      - ./mongodb:/data/db
-## Remove comments if you need an MQTT Broker
-## Also Remove the comment for links in the nodered sections above
-#  mqtt:
-#    container_name: PathForensic-MQTT
-#    restart: always
-#    image: eclipse-mosquitto
-#    user: '0'
-#    ports:
-#      - '1883:1883'
+## Add comments below if you already have an MongoDB
+  mongodb:
+#    image: mongo:4.4.18  #Use this on RasPi  
+    image: mongo:6.0.13  #Us this on PC
+    container_name: PathForensic-mongodb
+    restart: always
+    environment:
+      - MONGODB_AUTH=false
+    networks:
+      - app_network
+    volumes:
+      - ./mongodb:/data/db
+## Add comments below if you already have an MQTT broker
+  mqtt:
+    container_name: PathForensic-MQTT
+    restart: always
+    image: eclipse-mosquitto
+    user: '0'
+    networks:
+      - app_network
+    ports:
+      - '1883:1883'
+    volumes:
+      - ./mosquitto:/mosquitto/config
+networks:
+  app_network:
+    driver: bridge
